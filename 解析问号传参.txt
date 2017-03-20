@@ -1,0 +1,13 @@
+//window.location.href -> 获取当前页面的URL地址 "http://localhost/detail.html?id=6&name=zf&age=8" =>{id:6,name:'zf',age:8}
+var reg = /([^?&#=]+)=([^?&#=]+)/g,
+    urlObj = {};
+window.location.href.replace(reg, function () {
+    //arguments[0] -> id=6
+    //arguments[1] -> id
+    //arguments[2] -> 6
+    urlObj[arguments[1]] = arguments[2];
+});
+console.log(urlObj);
+
+
+http://old.zhufengpeixun.cn/qianduanjishuziliao/javaScriptzhuanti/2016-07-02/482.html
